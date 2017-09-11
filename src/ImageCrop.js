@@ -180,7 +180,7 @@ class ImageCrop extends Component {
         <View {...this._panResponder.panHandlers}>
           <Surface width={this.props.cropWidth} height={this.props.cropHeight} pixelRatio={this.props.pixelRatio} backgroundColor="transparent" ref="cropit">
 		        <GLImage
-		          source={{ uri: this.props.image}}
+		          source={ this.props.source }
               imageSize={{height: this.state.imageHeight, width: this.state.imageWidth}}
 		          resizeMode="cover"
 		          zoom={this.state.zoom}
