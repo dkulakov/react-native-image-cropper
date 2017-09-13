@@ -67,8 +67,8 @@ class ImageCrop extends Component {
     Image.getSize(this.props.source.uri, (width, height) => {
       //update state
       this.setState({
-        imageHeight: height,
-        imageWidth: width,
+        imageHeight: height > width ? height: width,
+        imageWidth: height > width ? width : height,
       })
     })
 
